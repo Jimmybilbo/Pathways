@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "845233473907",
+    "project_id": "firebase-final-simplethreads",
+    "storage_bucket": "firebase-final-simplethreads.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845233473907:android:2cdfac04d8ca5e6b161d06",
+        "android_client_info": {
+          "package_name": "com.example.firebase_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW74llpangnitJLLeJKRNYq1Izu8QyurU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
