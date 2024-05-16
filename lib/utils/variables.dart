@@ -14,3 +14,4 @@ myStyle (double size, [Color color = Colors.white, FontWeight fw = FontWeight.no
 
 
 CollectionReference usercollection = FirebaseFirestore.instance.collection('users');
+CollectionReference pathcollection = FirebaseFirestore.instance.collection('paths');

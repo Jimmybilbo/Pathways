@@ -28,7 +28,6 @@ class _SignUpState extends State<SignUp> {
         'username': usernamecontroller.text,
         'email': emailcontroller.text,
         'password': passwordcontroller.text,
-        'uid': signeduser.user!.uid,
         'profilepic': 'https://static.vecteezy.com/system/resources/previews/026/619/142/original/default-avatar-profile-icon-of-social-media-user-photo-image-vector.jpg',
 
       });

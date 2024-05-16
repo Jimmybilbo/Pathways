@@ -20,8 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[700],
-      
       body: Center(
         child: pageoptions[page],
       ),
@@ -33,19 +31,29 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         selectedItemColor: Colors.red[400],
-        unselectedItemColor: Colors.black87,
+        unselectedItemColor: Colors.white,
+        backgroundColor: Colors.blueGrey[700],
         currentIndex: page,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              size: 30,
+            ),
             label: 'Paths', 
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              size: 30,
+            ),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              size: 30,
+            ),
             label: 'Profile',
           ),
         ],
