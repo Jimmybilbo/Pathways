@@ -68,7 +68,7 @@ class _AddPathState extends State<AddPath> {
         'path': pathController.text,
         'time': Timestamp.now(),
         'likes': [],
-        'comments': 0,
+        'commentcount': 0,
         'shares': [],
         'id': 'Path $length',
       });

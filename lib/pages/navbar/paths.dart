@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_final/pages/addpath.dart';
+import 'package:firebase_final/pages/comments.dart';
 import 'package:firebase_final/utils/variables.dart';
 import 'package:flutter/material.dart';
 
@@ -61,7 +62,7 @@ class _PathsPageState extends State<PathsPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Paths', style: myStyle(50, Colors.white, FontWeight.bold)),
+        title: Text('Paths', style: myStyle(40, Colors.white, FontWeight.bold)),
         backgroundColor: Colors.blueGrey[700],
       ),
       floatingActionButton: FloatingActionButton(
@@ -92,7 +93,6 @@ class _PathsPageState extends State<PathsPage> {
                 child: ListTile(
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
                   leading: CircleAvatar(
-                    
                     radius: 25,
                     backgroundColor: Colors.white,
                     backgroundImage: NetworkImage(pathDoc['userimage']),
@@ -120,9 +120,14 @@ class _PathsPageState extends State<PathsPage> {
                           ),
                           Row(
                             children: [
-                              Icon(Icons.comment_outlined, color: Colors.red[400],),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => CommentPage(pathDoc['id'])));
+                                },
+                                child: Icon(Icons.comment_outlined, color: Colors.red[400],)
+                              ),
                               SizedBox(width: 6),
-                              Text(pathDoc['comments'].toString(), style: myStyle(14, Colors.black),),
+                              Text(pathDoc['commentcount'].toString(), style: myStyle(14, Colors.black),),
                             ],
                           ),
                           Row(
@@ -131,7 +136,8 @@ class _PathsPageState extends State<PathsPage> {
                                 onTap: () {sharePost(pathDoc['id']);},
                                 child: pathDoc['shares'].contains(uid)
                                 ? Icon(Icons.repeat_on_outlined, color: Colors.red[400])
-                                : Icon(Icons.repeat, color: Colors.red[400],)),
+                                : Icon(Icons.repeat, color: Colors.red[400],)
+                              ),
                               SizedBox(width: 6),
                               Text(pathDoc['shares'].length.toString(), style: myStyle(14, Colors.black),),
                             ],

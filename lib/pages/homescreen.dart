@@ -1,6 +1,7 @@
 import 'package:firebase_final/pages/navbar/paths.dart';
 import 'package:firebase_final/pages/navbar/profile.dart';
 import 'package:firebase_final/pages/navbar/search.dart';
+import 'package:firebase_final/pages/comments.dart';
 import 'package:firebase_final/utils/variables.dart';
 import 'package:flutter/material.dart';
 
